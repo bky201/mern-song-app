@@ -1,16 +1,40 @@
 # song-collection-project
 
-## To run docker for backend for our backend
+### Clone the the repo localy
+
+    git clone https://github.com/bky201/mern-song-app.git
+
+### cd /server and run the following command on the terminal
+
+    npm install
+
+    npm start
+
+### cd /client and run the following command on the terminal
+
+    npm install
+
+    npm start
+
+    
+
+## To run docker package for backend 
+
+### Start docker desktop
 
     systemctl --user start docker-desktop
 
- ### 1. cd song-collection/server   
- ### 2. run on the terminal
+ 
+### run on the terminal
 
     docker run --rm -d --name song-app -p 8000:8000 mohbekmoh/song-server:latest
 
-### 3. to stop the backend-server docker container
+### To stop the backend-server docker container
     docker stop song-app
+
+### cd /client and run the following command on the terminal
+
+    npm start
 
 
 
