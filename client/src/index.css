@@ -1,0 +1,37 @@
+body {
+    margin: 0;
+    padding: 20px 40px;
+    font-family: 'Playpen Sans', sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    min-height: 100%;
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.5;
+    color: #888;
+    text-align: left;
+    background-color: #fff;
+}
+  
+code {
+    font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+  
+a {
+    color: #78C2AD;
+    text-decoration: none;
+    background-color: transparent;
+}
+  
+* {
+    box-sizing: border-box;
+}
+
+.active {
+    color: white;
+    background-color: #78C2AD;
+}
+
+
+
