@@ -12,7 +12,7 @@
 
 ### cd /client and run the following command on the terminal
 
-    npm install
+    npm install or npm install --legacy-per-deps
 
     npm start
 
