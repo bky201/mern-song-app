@@ -5,7 +5,7 @@ const development = !process.env.ENVIRONMENT || process.env.ENVIRONMENT === 'dev
 let baseURL = "http://localhost:8000/api/"
 
 if (!development)
-    baseURL = "https://basicsongsdirectorywebapi.websites.net/api/songs"
+    baseURL = "https://mern-song-app-aljd.onrender.com/api/"
 
 
 export default axios.create({
