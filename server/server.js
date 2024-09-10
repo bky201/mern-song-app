@@ -1,14 +1,16 @@
 import express from "express";
 import cors from "cors";
 import mongoose from "mongoose";
-import { DATABASE } from "./config.js";
+// import { DATABASE } from "./config.js";
 import songRoutes from "./routes/song.js"
+import 'dotenv/config';
 
 const app = express();
 
+
 // db
 mongoose.set("strictQuery", false)
-mongoose.connect(DATABASE).then(() => {console.log("Connected to mongodb")}).catch((err) => {console.log("Unable to connect to mongodb")});
+mongoose.connect(process.env.DATABASE).then(() => {console.log("Connected to mongodb")}).catch((err) => {console.log("Unable to connect to mongodb")});
 
 // middlewares
 app.use(express.urlencoded({extended: true}));
