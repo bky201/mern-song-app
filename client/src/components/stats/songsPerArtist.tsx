@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import axios from "axios";
+import API from "../../api";
 
 import { StatContainer, StatText } from "./stats.styles";
 
@@ -18,7 +18,7 @@ export default function SongsPerArtist() {
 
     const fetchSongs = async () => {
         try {
-            const { data } = await axios.get("http://localhost:8000/api/stats");
+            const { data } = await API.get("stats");
             setSongsPerArtist(data.songsPerArtist);
         } catch (err) {
             console.log(err);            
