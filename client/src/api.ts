@@ -1,6 +1,6 @@
 import axios from 'axios';
 
-const development = !process.env.ENVIRONMENT || process.env.ENVIRONMENT === 'development';
+const development = process.env.ENVIRONMENT === 'development';
 
 let baseURL = "http://localhost:8000/api/"
 
