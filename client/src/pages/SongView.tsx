@@ -1,6 +1,6 @@
 import { useParams, useNavigate } from "react-router-dom";
 import { useEffect, useState } from "react";
-import axios from "axios";
+import API from "../api";
 
 import { TitleContainer, CardContainer, CardContent, CardElement, ButtonContainer, Button } from "./songView.styles";
 
@@ -38,7 +38,7 @@ export default function SongView() {
 
     const fetchSong = async () => {
         try {
-            const { data } = await axios.get(`http://localhost:8000/api/song/${params.slug}`);
+            const { data } = await API.get(`song/${params.slug}`);
             setSong(data.song);
         } catch (err) {
             console.log(err);

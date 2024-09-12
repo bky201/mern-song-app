@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
-import axios from "axios";
 import { useNavigate, useParams } from "react-router-dom";
+import API from "../api";
 
 import { TitleContainer, EditContainer, FormContainer, EditButton } from "./songEdit.styles";
 
@@ -39,7 +39,7 @@ export default function SongEdit() {
 
     const fetchSong = async () => {
         try {
-            const { data } = await axios.get(`http://localhost:8000/api/song/${params.slug}`);
+            const { data } = await API.get(`song/${params.slug}`);
             setSong(data.song);
         } catch (err) {
             console.log(err);
